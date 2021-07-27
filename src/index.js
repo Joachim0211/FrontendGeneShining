@@ -7,7 +7,7 @@ import Numbers from "./components/Numbers"
 
 ReactDOM.render(
   <React.StrictMode>   
-    <div><App /><Numbers /></div>
+    <div><App /></div>
   </React.StrictMode>,
   document.getElementById('root')
 );

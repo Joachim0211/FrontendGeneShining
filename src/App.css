@@ -28,6 +28,19 @@
   color: #61dafb;
 }
 
+.img-responsive {
+  max-width: 200px;
+  max-height: 150px;
+  min-width: 200px;
+  min-height: 150px;
+  border-radius: 20px;
+}
+
+.contleft{
+  height: 100%;
+  min-height: 750px !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
