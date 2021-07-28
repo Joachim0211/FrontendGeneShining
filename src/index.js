@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Numbers from "./components/Numbers"
 
 ReactDOM.render(
   <React.StrictMode>   
-    <div><App /></div>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

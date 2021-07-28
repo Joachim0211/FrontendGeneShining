@@ -1,51 +1,54 @@
-.App {
-  text-align: center;
+
+
+.fullScreen {
+ height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo{
+  height: 200px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.img-responsive {
-  max-width: 200px;
-  max-height: 150px;
-  min-width: 200px;
-  min-height: 150px;
+.rna{
+  height: 200px;
+  width: 800px;
+  margin-top: 50px;
   border-radius: 20px;
+  opacity: 30%;
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: rgb(248, 2, 2);
+}
+.navBar{
+  height: 100px;
 }
 
-.contleft{
-  height: 100%;
-  min-height: 750px !important;
+.explainBox{
+ margin: 200px 100px 0px 100px;
+ background-color: red;
+ color: blue;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title{
+  font-size: 60px;
+  font-weight: bold;
+  color: rgb(99, 2, 2);
+  width: 800px;
+  margin-top: 40px;
+}
+/* .titleBox{
+  margin: 100px 50px 50px 50px;
+} */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.input-field{
+  margin-top: 100px;
+}
+
+.main-container {
+
 }
