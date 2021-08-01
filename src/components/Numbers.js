@@ -1,73 +1,53 @@
 
-//import './Numbers.css';
+import './Numbers.css';
 import { Route, Switch, useHistory } from "react-router-dom";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useMemo, useCallback } from "react";
 import M from "materialize-css";
 import logo from "../pictures/logogs.png";
 import rna from "../pictures/rna.jpg";
 import { useDropzone } from 'react-dropzone';
+import Dropzone from "./Dropzone";
 
 export default function Numbers() {
 
-    
+
     const sidenavRef = useRef();
     const collapsibleRef = useRef();
     const history = useHistory();
-    const [numbers, setNumbers] = useState([]);
-    let change = 0;
+    const [ numbers, setNumbers ] = useState([]);
+    const [value, setValue] = useState(false);
+    //let change = 0;
+    
+
 
     useEffect(() => {
-        console.log("start")
-        const interval = setInterval(function() { 
-            
+        // console.log("start")
+        // const interval = setInterval(function () {
+        
             fetch("/numbers").
-            then(res => {
-                if (res.ok) {
-                    return res.json()
+                then(res => {
+                    if (res.ok) {
+                        return res.json()
+                    }
+                }).then(jsonRes => {
+                    if (jsonRes) { 
+                        //let old = numbers;     
+                        setNumbers(jsonRes.numbersList);
+                        setValue(!value);
+                        // console.log(old);
+                        // if(old != numbers){
+                        //     change++;
+                        //     console.log(change)
+                        // };
+
+                    }
+                })
+                if(numbers<=100){
+                setValue(!value);
                 }
-            }).then(jsonRes => {
-                if(jsonRes){
-                    
-                    setNumbers(jsonRes.numbersList)   
-                }
-            })
-        }, 1000);
-        return () => clearInterval(interval);
-    }, []);
-
-    // function triggerFetch(){        
-    //     change++;
-    //     console.log(change);
-    //     console.log(numbers);
-    // }
-    // const interval = setInterval(function() { 
-    //     triggerFetch(); 
-    // }, 3000);
-    
-    
-    
-    
-
-    // useEffect(()=>{
-
-    //     let rollAnalyses = numbers[0];
-
-    //   }, [numbers]);
-
-
-
-
-    // function Basic(props) {
-    //     const { acceptedFiles, getRootProps, getInputProps } = useDropzone();
-
-    //     const files = acceptedFiles.map(file => (
-    //         <li key={file.path}>
-    //             {file.path} - {file.size} bytes
-    //         </li>
-    //     ));
-    // }
-    
-    
+       // }, 1000);
+       // return () => clearInterval(interval);
+    }, [value]);    
 
     return (
         <>
@@ -76,7 +56,7 @@ export default function Numbers() {
                 <nav className="blue darken-4 col s10 offset-s2">
 
                     <div className="nav-wrapper">
-                            <a href="#" data-target="mobile-demo" className="sidenav-trigger">
+                        <a href="#" data-target="mobile-demo" className="sidenav-trigger">
                             <i className="material-icons">menu</i>
                         </a>
                         <ul className="right hide-on-med-and-down">
@@ -119,6 +99,11 @@ export default function Numbers() {
                         <div className="input-field">
                             Place for the dropzone
                         </div>
+                        <button className="button">Got to analyses</button>
+                        <a className="btn-large blue darken-4 button" >Go to analysis</a>
+                        <a className="btn-large blue darken-4 button" onClick={() => history.push("/visualization")}>Go to Mona Lisa</a>
+                        <a className="btn-large blue darken-4 button" onClick={() => setInterval}>Start Analyses</a>
+
                     </div>
 
 
@@ -126,27 +111,12 @@ export default function Numbers() {
                         <div>
                             {numbers && numbers.map((number, index) => <li key={index}>{number}</li>)}
                         </div>
-                        <a className="btn-large blue darken-4 button" >Go to analysis</a>
-                        <a className="btn-large blue darken-4 button" onClick={() => history.push("/visualization")}>Go to Mona Lisa</a>
-                        <a className="btn-large blue darken-4 button" onClick={() => setInterval}>Start Analyses</a>
-
+                        <Dropzone /> 
                         <div className="progress">
-                            <div className="determinate" style={{width: `${numbers[0]}%`}}></div>
+                            <div className="determinate" style={{ width: `${numbers[0]}%` }}></div>
                         </div>
-
 
                     </div>
-                    {/* <section className="container">
-                        <div {...getRootProps({ className: 'dropzone' })}>
-                            <input {...getInputProps()} />
-                            <p>Drag 'n' drop some files here, or click to select files</p>
-                        </div>
-                        <aside>
-                            <h4>Files</h4>
-                            <ul>{files}</ul>
-                        </aside>
-                    </section> */}
-
 
                 </div>
 
