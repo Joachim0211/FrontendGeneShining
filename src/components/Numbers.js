@@ -9,6 +9,7 @@ import { useDropzone } from 'react-dropzone';
 import Dropzone from "./Dropzone";
 import DNALoader from "./DNALoader"
 
+
 export default function Numbers() {
 
 
@@ -100,19 +101,155 @@ export default function Numbers() {
                 <div className="row">
                     <div className="col s2 light-blue lighten-2 fullScreen">
                         <img src={logo} alt="Gene Shining Logo" className="logo" />
-                        <button className="button">Got to analyses</button>
+                        <button className="button">Go to analyses</button>
                         <a className="btn-large blue darken-4 button" >Go to analysis</a>
                         <a className="btn-large blue darken-4 button" onClick={() => history.push("/visualization")}>Go to Mona Lisa</a>
                     </div>
-                    <div className="col s10 cyan accent-1 fullScreen center-align valign-wrapper">
-                        {/* <div>
-                            {numbers && numbers.map((number, index) => <li key={index}>{number}</li>)}
-                        </div> */}
-                        {!analysisData && !loading && <Dropzone setAnalysisData={setAnalysisData} setLoading={setLoading}/>}
-
-                        {loading && <DNALoader />}
+                    <div className="col s10 cyan accent-1 fullScreen">
                         
-                        {analysisData && (<div> {JSON.stringify(analysisData)}</div>)}
+                        {!analysisData && !loading && <Dropzone setAnalysisData={setAnalysisData} setLoading={setLoading} />}
+                        
+                        {/* first step */}
+                        {loading && (<div>
+                            <div class="row">
+                                <div class="col s3">
+                                    <div class="card blue-grey darken-1">
+                                        <div class="card-content white-text">
+                                            <span class="card-title">1. Step</span>
+                                            <p>GeneShining is calculating how many genes are active (total and % of all known).</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a>A number will appear here once the analysis is done!<i class="material-icons right">loop</i></a>
+                                        </div>
+                                    </div>
+                                    <DNALoader />
+                                </div>
+                              
+                                <div class="col s3">
+                                    <div class="card blue-grey darken-1">
+                                        <div class="card-content white-text">
+                                            <span class="card-title">1. Step</span>
+                                            <p>GeneShining is calculating how many genes are active (total and % of all known).</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a>A number will appear here once the analysis is done!<i class="material-icons right">loop</i></a>
+                                        </div>
+                                    </div>
+                                    <DNALoader />
+                                </div>
+
+                                <div class="col s3">
+                                    <div class="card blue-grey darken-1">
+                                        <div class="card-content white-text">
+                                            <span class="card-title">1. Step</span>
+                                            <p>GeneShining is calculating how many genes are active (total and % of all known).</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a>A number will appear here once the analysis is done!<i class="material-icons right">loop</i></a>
+                                        </div>
+                                    </div>
+                                    <DNALoader />
+                                </div>
+                                <div class="col s3">
+                                    <div class="card blue-grey darken-1">
+                                        <div class="card-content white-text">
+                                            <span class="card-title">1. Step</span>
+                                            <p>GeneShining is calculating how many genes are active (total and % of all known).</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a>A number will appear here once the analysis is done!<i class="material-icons right">loop</i></a>
+                                        </div>
+                                    </div>
+                                    <DNALoader />
+                                </div>
+
+
+                            </div>
+                            {loading && (<div>
+                            <div class="row">
+                                <div class="col s6 offset-s3">
+                                    <div class="card #e57373 red lighten-2">
+                                        <div class="card-content white-text">
+                                            <span class="card-title">1. Step</span>
+                                            <p>GeneShining is calculating how many genes are active (total and % of all known).</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a>A number will appear here once the analysis is done!<i class="material-icons right">youtube_searched_for</i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>)}                         
+
+
+
+                        </div>)}
+                        {analysisData && (<div>
+                            <div class="row">
+                                <div class="col s12 m3">
+                                    <div class="card blue-grey darken-1">
+                                        <div class="card-content white-text">
+                                            <span class="card-title">1. Step</span>
+                                            <p>GeneShining is calculating how many genes are active (total and % of all known).</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a>{analysisData.candNumTC} genes out of {analysisData.timeCounter} = {analysisData.diffToDisease}% are active in the analysed organism. <br></br> Thats in the range of a normal percentage!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m3">
+                                    <div class="card blue-grey darken-1">
+                                        <div class="card-content white-text">
+                                            <span class="card-title">1. Step</span>
+                                            <p>GeneShining is calculating how many genes are active (total and % of all known).</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a>{analysisData.candNumTC} genes out of {analysisData.timeCounter} = {analysisData.diffToDisease}% are active in the analysed organism. <br></br> Thats in the range of a normal percentage!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m3">
+                                    <div class="card blue-grey darken-1">
+                                        <div class="card-content white-text">
+                                            <span class="card-title">1. Step</span>
+                                            <p>GeneShining is calculating how many genes are active (total and % of all known).</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a>{analysisData.candNumTC} genes out of {analysisData.timeCounter} = {analysisData.diffToDisease}% are active in the analysed organism. <br></br> Thats in the range of a normal percentage!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s12 m3">
+                                    <div class="card blue-grey darken-1">
+                                        <div class="card-content white-text">
+                                            <span class="card-title">1. Step</span>
+                                            <p>GeneShining is calculating how many genes are active (total and % of all known).</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a>{analysisData.candNumTC} genes out of {analysisData.timeCounter} = {analysisData.diffToDisease}% are active in the analysed organism. <br></br> Thats in the range of a normal percentage!</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s6 offset-s3">
+                                    <div class="card #e57373 red lighten-2">
+                                        <div class="card-content white-text">
+                                            <span class="card-title">1. Step</span>
+                                            <p>GeneShining is calculating how many genes are active (total and % of all known).</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a>A number will appear here once the analysis is done!<i class="material-icons right">youtube_searched_for</i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>)}
+                        
+                        
+                        
                     </div>
 
                 </div>

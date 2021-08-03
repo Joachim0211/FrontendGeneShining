@@ -32,3 +32,6 @@
     width: 120px;
   
   }
+  .card{
+    min-height: 300px;
+  }

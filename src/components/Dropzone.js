@@ -94,7 +94,7 @@ function StyledDropzone(props) {
                     </li>
                 ))}
             </ul>
-            <button className="file-upload-btn" onClick={uploadFiles}>Upload Files</button>
+            <button className="file-upload-btn" onClick={uploadFiles}>Upload Files<i class="material-icons right">file_upload</i></button>
         </div>
     );
 }
