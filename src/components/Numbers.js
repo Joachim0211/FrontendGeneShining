@@ -7,6 +7,7 @@ import logo from "../pictures/logogs.png";
 import rna from "../pictures/rna.jpg";
 import { useDropzone } from 'react-dropzone';
 import Dropzone from "./Dropzone";
+import DNALoader from "./DNALoader"
 
 export default function Numbers() {
 
@@ -14,40 +15,43 @@ export default function Numbers() {
     const sidenavRef = useRef();
     const collapsibleRef = useRef();
     const history = useHistory();
-    const [ numbers, setNumbers ] = useState([]);
+    const [numbers, setNumbers] = useState([]);
     const [value, setValue] = useState(false);
+    const [analysisData, setAnalysisData] = useState()
+    const [loading, setLoading] = useState(false)
     //let change = 0;
-    
 
 
-    useEffect(() => {
-        // console.log("start")
-        // const interval = setInterval(function () {
-        
-            fetch("/numbers").
-                then(res => {
-                    if (res.ok) {
-                        return res.json()
-                    }
-                }).then(jsonRes => {
-                    if (jsonRes) { 
-                        //let old = numbers;     
-                        setNumbers(jsonRes.numbersList);
-                        setValue(!value);
-                        // console.log(old);
-                        // if(old != numbers){
-                        //     change++;
-                        //     console.log(change)
-                        // };
 
-                    }
-                })
-                if(numbers<=100){
-                setValue(!value);
-                }
-       // }, 1000);
-       // return () => clearInterval(interval);
-    }, [value]);    
+    // useEffect(() => {
+    //     // console.log("start")
+    //     // const interval = setInterval(function () {
+
+    //         fetch("/numbers").
+    //             then(res => {
+    //                 if (res.ok) {
+    //                     return res.json()
+    //                 }
+    //             }).then(jsonRes => {
+    //                 if (jsonRes) { 
+    //                     //let old = numbers;     
+    //                     setNumbers(jsonRes.numbersList);
+    //                     setValue(!value);
+    //                     // console.log(old);
+    //                     // if(old != numbers){
+    //                     //     change++;
+    //                     //     console.log(change)
+    //                     // };
+
+    //                 }
+    //             })
+    //             if(numbers<=100){
+    //             setValue(!value);
+    //             }
+    //    // }, 1000);
+    //    // return () => clearInterval(interval);
+    // }, [value]);    
+
 
     return (
         <>
@@ -96,26 +100,19 @@ export default function Numbers() {
                 <div className="row">
                     <div className="col s2 light-blue lighten-2 fullScreen">
                         <img src={logo} alt="Gene Shining Logo" className="logo" />
-                        <div className="input-field">
-                            Place for the dropzone
-                        </div>
                         <button className="button">Got to analyses</button>
                         <a className="btn-large blue darken-4 button" >Go to analysis</a>
                         <a className="btn-large blue darken-4 button" onClick={() => history.push("/visualization")}>Go to Mona Lisa</a>
-                        <a className="btn-large blue darken-4 button" onClick={() => setInterval}>Start Analyses</a>
-
                     </div>
-
-
-                    <div className="col s10 cyan accent-1 fullScreen center-align">
-                        <div>
+                    <div className="col s10 cyan accent-1 fullScreen center-align valign-wrapper">
+                        {/* <div>
                             {numbers && numbers.map((number, index) => <li key={index}>{number}</li>)}
-                        </div>
-                        <Dropzone /> 
-                        <div className="progress">
-                            <div className="determinate" style={{ width: `${numbers[0]}%` }}></div>
-                        </div>
+                        </div> */}
+                        {!analysisData && !loading && <Dropzone setAnalysisData={setAnalysisData} setLoading={setLoading}/>}
 
+                        {loading && <DNALoader />}
+                        
+                        {analysisData && (<div> {JSON.stringify(analysisData)}</div>)}
                     </div>
 
                 </div>
