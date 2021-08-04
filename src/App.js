@@ -43,36 +43,32 @@ function App() {
 
   return (
     <>
-      <Switch>
-        <Route exact path="/">
-          <div className="main-container">
-            <ul className="sidenav" id="mobile-demo" ref={sidenavRef}>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">Tomato Seq</a>
-              </li>
-              <li>
-                <a href="#">Genomes</a>
-              </li>
-              <li>
-                <a href="#">BioInfo</a>
-              </li>
-            </ul>
-
-            <nav class="nav-extended">
-              <div class="nav-wrapper">
-                <a href="#" class="brand-logo"><img src={logo} width="140" height="60" alt="Logo" /></a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                  <li><a href="sass.html">Home</a></li>
-                  <li><a href="badges.html">Tomato Seq</a></li>
-                  <li><a href="collapsible.html">Genomes</a></li>
-                  <li><a href="collapsible.html">BioInfo</a></li>
-                </ul>
-              </div>
-              {/* <div class="nav-content">
+      <ul className="sidenav" id="mobile-demo" ref={sidenavRef}>
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Tomato Seq</a>
+        </li>
+        <li>
+          <a href="#">Genomes</a>
+        </li>
+        <li>
+          <a href="#">BioInfo</a>
+        </li>
+      </ul>
+      <nav class="nav-extended">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo"><img src={logo} width="140" height="60" alt="Logo" /></a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="sass.html">Home</a></li>
+            <li><a href="badges.html">Tomato Seq</a></li>
+            <li><a href="collapsible.html">Genomes</a></li>
+            <li><a href="collapsible.html">BioInfo</a></li>
+          </ul>
+        </div>
+        {/* <div class="nav-content">
                 <ul class="tabs tabs-transparent">
                   <li class="tab"><a href="#test1">Test 1</a></li>
                   <li class="tab"><a class="active" href="#test2">Test 2</a></li>
@@ -80,18 +76,24 @@ function App() {
                   <li class="tab"><a href="#test4">Test 4</a></li>
                 </ul>
               </div> */}
-            </nav>
+      </nav>
 
-            <ul class="sidenav" id="mobile-demo">
-              <li><a href="sass.html">Sass</a></li>
-              <li><a href="badges.html">Components</a></li>
-              <li><a href="collapsible.html">JavaScript</a></li>
-            </ul>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li>
+      </ul>
 
-            {/* <div id="test1" class="col s12">Test 1</div>
-  <div id="test2" class="col s12">Test 2</div>
-  <div id="test3" class="col s12">Test 3</div>
-  <div id="test4" class="col s12">Test 4</div> */}
+      {/* <div id="test1" class="col s12">Test 1</div>
+        <div id="test2" class="col s12">Test 2</div>
+        <div id="test3" class="col s12">Test 3</div>
+        <div id="test4" class="col s12">Test 4</div> */}
+
+      <Switch>
+        <Route exact path="/">
+          <div className="main-container">
+
+
 
 
             {/* here starts */}
@@ -135,17 +137,21 @@ function App() {
                   <div>
                     <div className="main-title-content">
                       <span className="darkRed card-title main-card-title"> <span className="main-git-title">GeneShining</span>
-                      <br />
-                      The earliest possible diagnosis of latent diseases based on gene activity (RNAseq). Please upload a text file with normalized expression data for each gene of the respective organism.
+                        <br />
+                        <br />
+                        The earliest possible diagnosis of latent diseases based on gene activity (RNAseq).
+                        <br />
+                        Please upload a text file with normalized expression data for each gene of the respective organism.
                       </span>
                       <div>
-                      <img src="/dna.png" alt="Hero" width="400" height="400" style={{paddingTop: 100}} />
+                        <img src="/dna.png" alt="Hero" width="400" height="400" style={{ paddingTop: 100, marginBottom: 40, marginLeft: 30 }} />
+                      </div>
+                      <a class="waves-effect btn-large modal-trigger blue darken-4 modal-1" href="#modal1">Example of accepted file</a>
                     </div>
-                    </div>
-                   
+
                   </div>
-                  
-                  <a class="waves-effect btn-large modal-trigger blue darken-4 modal-1" href="#modal1">Example of accepted file</a>
+
+
 
                   <div id="modal1" class="modal" ref={modalRef}>
                     <div class="modal-content">
@@ -198,25 +204,7 @@ function App() {
 
           </div>
 
-          <footer class="page-footer">
-            <div class="container">
-              <div class="row">
-                <div class="col l8 offset-l2 s12">
-                  <ul className="footer-links-custom">
-                    <li><a class="grey-text text-lighten-3" href="#!">What is RNAseq and why it is ideal as a diagnostic tool?</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">What can you achieve with this website?</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">What do you need for running an analyses?</a></li>
-                    <li><a class="grey-text text-lighten-3" href="#!">How to start?</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="footer-copyright">
-              <div class="container">
-                © 2021 Gene Shining
-              </div>
-            </div>
-          </footer>
+
 
         </Route>
         <Route path="/analyses">
@@ -226,6 +214,25 @@ function App() {
           <>Mona Lisa</>
         </Route>
       </Switch>
+      <footer class="page-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col l8 offset-l2 s12">
+              <ul className="footer-links-custom">
+                <li><a class="grey-text text-lighten-3" href="#!">What is RNAseq and why it is ideal as a diagnostic tool?</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">What can you achieve with this website?</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">What do you need for running an analyses?</a></li>
+                <li><a class="grey-text text-lighten-3" href="#!">How to start?</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+            © 2021 Gene Shining
+          </div>
+        </div>
+      </footer>
     </>
   )
 }

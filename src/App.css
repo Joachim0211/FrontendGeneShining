@@ -52,13 +52,6 @@ font-family: 'Roboto', sans-serif;
  align-items: center;
 }
 
-.explanationPanel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 .btn-container h3 {
   font-size: 24px;
 }
@@ -123,12 +116,12 @@ font-family: 'Roboto', sans-serif;
 
 /* New Style */
 .nav-extended{
-  background-color:#194350;
+  background-color:#22559C;
   color: #fff;
   font-weight: 500;
 }
 .page-footer{
-  background-color: #194350;
+  background-color: #22559C;
 }
 .footer-links-custom{
   font-size: 18px;
@@ -168,8 +161,9 @@ font-family: 'Roboto', sans-serif;
   text-align: left;
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content:flex-start;
   flex-wrap: wrap;
+  padding-left: 10px;
 }
 .explanationPanel{
   align-items: flex-start;
@@ -185,14 +179,18 @@ font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
   color: #900C3F;
 }
-.modal-1{
-  margin-left: 48px;
-  margin-top: -20px;
-}
+
 .modal-content{
   color: #222;
   text-align:left;
 }
 .floating-red-btn{
   margin-left: 40px;
+}
+
+@media screen and (max-width: 600px) {
+  .main-title-content *{
+    width: 410px;
+    padding-left: 0px;
+  }
 }
