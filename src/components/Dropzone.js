@@ -9,9 +9,9 @@ const baseStyle = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    padding: '20px',
-    borderWidth: 2,
-    borderRadius: 2,
+    padding: '120px',
+    borderWidth: 4,
+    borderRadius: 25,
     borderColor: '#eeeeee',
     borderStyle: 'dashed',
     backgroundColor: '#fafafa',
@@ -83,6 +83,22 @@ function StyledDropzone(props) {
 
     return (
         <div className="container">
+              <div class="col s12">
+    <h2 class="header">How to use Gene Shining</h2>
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="https://innerbody.imgix.net/animated-DNA-2.gif" alt="blabla"/>
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+    </div>
+  </div>
             <div {...getRootProps({ style })}>
                 <input {...getInputProps()} />
                 <p>Drag 'n' drop some files here, or click to select files</p>

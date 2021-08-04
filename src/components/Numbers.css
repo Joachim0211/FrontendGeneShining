@@ -1,28 +1,4 @@
-.progress{
-    position: relative;
-    width: 800px;
-    height: 30px;
-    margin-top: 10px;
-    border-radius: 5px;
-    border: 1px solid black;
-    overflow: hidden;
-    /*transform: rotate(90deg);*/
-  }
-  
-  .progress__fill{
-    width: 0%;
-    height: 100%;
-    background:rgb(3, 102, 3); 
-     
-  }
-  
-  .progress__text{
-    position: absolute;
-    top: 50%;
-    right: 5px;
-    transform: translateY(-50%);
-    color:white;
-  }
+
 
   .button{
     margin: 50px 50px 0px 40px;
@@ -34,4 +10,23 @@
   }
   .card{
     min-height: 300px;
+  }
+
+  .main-card{
+    min-height: 200px;
+  }
+
+  .Inspector{
+    height: 100px;
+  }
+
+  .card-title{
+    align-self: center;
+  }
+
+  .first-row{
+    margin-top: 50px;
+  }
+  .second-row{
+    margin-top: 100px;
   }

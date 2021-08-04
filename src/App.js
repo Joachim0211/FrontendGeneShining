@@ -6,7 +6,6 @@ import React, { useRef, useEffect, useState } from "react";
 import M from "materialize-css";
 import logo from "./pictures/logogs.png";
 import rna from "./pictures/rna.jpg";
-import {  } from "react-router-dom";
 
 
 
@@ -14,6 +13,7 @@ import {  } from "react-router-dom";
 function App() {
   const sidenavRef = useRef();
   const collapsibleRef = useRef();
+  const modalRef = useRef();
   const history = useHistory();
 
   useEffect(() => {
@@ -23,6 +23,9 @@ function App() {
     if (collapsibleRef.current) {
       M.Collapsible.init(collapsibleRef.current);
     }
+    if (modalRef.current) {
+      M.Modal.init(modalRef.current);
+    }
   }, []);
 
   return (
@@ -30,32 +33,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <div className="main-container">
-            <nav className="blue darken-4 col s10 offset-s2">
-
-              <div className="nav-wrapper">
-                {/* <a href="#!" className="brand-logo">
-            Logo
-          </a> */}
-
-                <a href="#" data-target="mobile-demo" className="sidenav-trigger">
-                  <i className="material-icons">menu</i>
-                </a>
-                <ul className="right hide-on-med-and-down">
-                  <li>
-                    <a href="sass.html">RNAseq</a>
-                  </li>
-                  <li>
-                    <a href="badges.html">Tomato Seq</a>
-                  </li>
-                  <li>
-                    <a href="collapsible.html">Genomes</a>
-                  </li>
-                  <li>
-                    <a href="mobile.html">Bioinfo</a>
-                  </li>
-                </ul>
-              </div>
-            </nav>
+            
 
             <ul className="sidenav" id="mobile-demo" ref={sidenavRef}>
               <li>
@@ -74,48 +52,99 @@ function App() {
 
             {/* here starts */}
 
-            <div class="row">
-              <div class="col s2 light-blue lighten-2 fullScreen">
+            <div className="row">
+              <div className="col s2 light-blue lighten-2 fullScreen">
                 <img src={logo} alt="Gene Shining Logo" className="logo" />
-                <div class="input-field">
-                  <input value="Tomato" id="organism" type="text" class="validate" />
-                  <label class="active" for="organism">Organism to analyse</label>
+                <div className="input-field">
+                  <input value="Tomato" id="organism" type="text" className="validate" />
+                  <label className="active" for="organism">Organism to analyse</label>
                 </div>
-                <a class="btn-large blue darken-4 button" onClick={()=> history.push("/analyses")}>Go to analysis</a>
+                <div className="left-nav-links">
+                <ul className="left">
+                  <li>
+                    <a href="#">> RNAseq</a>
+                  </li>
+                  <li>
+                    <a href="#">> Tomato Seq</a>
+                  </li>
+                  <li>
+                    <a href="#">> Genomes</a>
+                  </li>
+                  <li>
+                    <a href="#">> Bioinfo</a>
+                  </li>
+                </ul>
+                </div>
               </div>
 
 
-              <div class="col s10 cyan accent-1 fullScreen center-align">
-                <div class="container">
+              <div className="col s10 cyan accent-1 fullScreen center-align">
+                <div className="container">
                   <img src={rna} alt="" className="rna" />
-                  <div class="centered"><div class="title">Welcome to<br></br> Gene Shining!</div></div>
+                  <div className="centered">
+                    <div className="title">Welcome to<br></br> Gene Shining!
+                    </div>
+                  </div>
                 </div>
                 <div>
-                  <ul class="collapsible explainBox" ref={collapsibleRef} >
-                    <li>
-                      <div class="collapsible-header"><i class="material-icons">apps</i>What is RNAseq and why it is ideal as a diagnostic tool?</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li>
-                      <div class="collapsible-header"><i class="material-icons">autorenew</i>What can you achieve with this website?</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li>
-                      <div class="collapsible-header"><i class="material-icons">build</i>What do you need for running an analyses?</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                    <li>
-                      <div class="collapsible-header"><i class="material-icons">flight_takeoff</i>How to start?</div>
-                      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-                    </li>
-                  </ul>
+                  {/* <a className="btn-large blue darken-4 button" >Go to analysis</a> */}
+                  <div className="row explanationPanel" style={{ marginBottom: "0" }}>
+                    <div className="col s5" style={{ marginLeft: "0", paddingTop: '1.5em', paddingBottom: '0em' }}>
+                      <div className="card-panel ">
+                        <span className="darkRed">GeneShining is a website for the earliest possible diagnosis of latent diseases based on gene activity (RNAseq). Please upload a text file with normalized expression data for each gene of the respective organism.
+                        </span>
+                      </div>
+                    </div>
+                    <a class="waves-effect waves-light btn modal-trigger blue darken4" href="#modal1" style={{ marginTop: "1.5em" }}>Example of accepted file</a>
+                    <div id="modal1" class="modal" ref={modalRef}>
+                      <div class="modal-content">
+                        <h4>Sample of accepted file format</h4>
+                        <p>Solyc00g005000.3.1	Eukaryotic aspartyl protease family protein (AHRD V3.3 *** AT3G20015.1)	1377	0	0	0
+                        </p>
+                        <p>Solyc00g005040.3.1	Potassium channel (AHRD V3.3 *-* D0EM91_9ROSI)	357	0.1	0.9564	0
+                        </p>
+                        <p>Solyc00g005050.3.1	UPF0664 stress-induced protein C29B12.11c (AHRD V3.3 *** A0A151ST26_CAJCA)	588	96.1	0.1885	0.6
+                        </p>
+                        <p>Solyc00g005060.1.1	LOW QUALITY:Cyclin/Brf1-like TBP-binding protein (AHRD V3.3 --* AT2G01280.3)	273	0	0	0</p>
+                        <p>Solyc00g005094.1.1	Glucose-6-phosphate 1-dehydrogenase 3, chloroplastic (AHRD V3.3 --* G6PD3_ARATH)	240	0.57	0.027	2.9
+                        </p>
+                      </div>
+                      <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Ok</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="btn-container">
+                    <h3>Analyze your genes data now</h3>
+                    <a className="btn-floating btn-large red darken-2 pulse" onClick={() => history.push("/analyses")}><i class="material-icons">find_in_page</i></a>
+                  </div>
+                  <div className="collapsible-container">
+                    <ul className="collapsible explainBox darkRed" ref={collapsibleRef} >
+                      <li>
+                        <div className="collapsible-header"><i className="material-icons">apps</i>What is RNAseq and why it is ideal as a diagnostic tool?</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                      </li>
+                      <li>
+                        <div className="collapsible-header"><i className="material-icons">autorenew</i>What can you achieve with this website?</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                      </li>
+                      <li>
+                        <div className="collapsible-header"><i className="material-icons">build</i>What do you need for running an analyses?</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                      </li>
+                      <li>
+                        <div className="collapsible-header"><i className="material-icons">flight_takeoff</i>How to start?</div>
+                        <div className="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
 
             </div>
 
           </div>
-          );
+
         </Route>
         <Route path="/analyses">
           <Numbers></Numbers>
