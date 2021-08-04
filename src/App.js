@@ -120,6 +120,22 @@ function App() {
                       <a href="#" className='white-text'> Bioinfo</a>
                     </li>
                   </ul>
+                
+                <div className="left-nav-links">
+                <ul className="left">
+                  <li>
+                    <a href="#">> RNAseq</a>
+                  </li>
+                  <li>
+                    <a href="#">> Tomato Seq</a>
+                  </li>
+                  <li>
+                    <a href="#">> Genomes</a>
+                  </li>
+                  <li>
+                    <a href="#">> Bioinfo</a>
+                  </li>
+                </ul>
                 </div>
               </div> */}
 
