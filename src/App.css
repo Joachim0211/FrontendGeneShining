@@ -1,19 +1,27 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
 
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+font-family: 'Roboto', sans-serif;
+}
 .fullScreen {
  height: 100vh;
+ width: 100vw;
 }
 
 .logo{
-  width: 100%;
+  width: 240px;
+  mix-blend-mode: color-burn;
 }
 
 .rna{
-  height: 200px;
-  width: 800px;
-  margin-top: 50px;
-  border-radius: 20px;
-  opacity: 30%;
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+  opacity: 100%;
 }
 .container {
   position: relative;
@@ -52,22 +60,20 @@
 }
 
 .btn-container h3 {
-  padding-bottom: 15px;
-  padding-right: 20px;
+  font-size: 24px;
 }
-
 .collapsible-container {
-  width: 50%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .explainBox{
  margin: 0px 0px 0px 0px;
- background-color: red;
+ background-color: #f4f4f4;
  }
 
 .darkRed{
-  color: rgb(99, 2, 2);
+  color: rgb(161, 161, 161)
 }
 
 .button{
@@ -98,5 +104,95 @@
   margin-top: 100px;
 }
 
+.navbar-text{
+  color: #fff
+}
+.explanationPanel{
+  padding-top: 20px;  
+}
+
+.card-panel{
+  font-size: 18px;
+  background-color: white;
+  border-radius: 8px;
+}
+.card-title{
+  color: #222;
+}
 
 
+/* New Style */
+.nav-extended{
+  background-color:#194350;
+  color: #fff;
+  font-weight: 500;
+}
+.page-footer{
+  background-color: #194350;
+}
+.footer-links-custom{
+  font-size: 18px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+.footer-links-custom *{
+  padding-bottom: 10px;
+}
+.main-page-content{
+  height: fit-content;
+  width: 100%;
+  background-color: #F4F4F2
+}
+.main-content {
+ width: 100vw;
+ height: fit-content;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap; */
+}
+.anaylize-btn-container{
+  margin-top: 140px;
+  padding-bottom: 40px;
+}
+.anaylize-btn-container h3{
+  font-size: 26px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.main-title-content{
+  font-size: 20px;
+  color: #ccc;
+  font-weight: 500;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+.explanationPanel{
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+.main-card-title{
+  width: 50%;
+}
+.main-git-title{
+  font-size: 54px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #900C3F;
+}
+.modal-1{
+  margin-left: 48px;
+  margin-top: -20px;
+}
+.modal-content{
+  color: #222;
+  text-align:left;
+}
+.floating-red-btn{
+  margin-left: 40px;
+}
