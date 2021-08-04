@@ -25,7 +25,8 @@ export default function DNALoader() {
       <div className="ele"></div>
       <div className="ele"></div>
       <div className="ele"></div>
-      <div className="ele"></div>
+      
+      
     </div>
     </>
   );

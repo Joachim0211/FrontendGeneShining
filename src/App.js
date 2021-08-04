@@ -55,10 +55,7 @@ function App() {
             <div className="row">
               <div className="col s2 light-blue lighten-2 fullScreen">
                 <img src={logo} alt="Gene Shining Logo" className="logo" />
-                <div className="input-field">
-                  <input value="Tomato" id="organism" type="text" className="validate" />
-                  <label className="active" for="organism">Organism to analyse</label>
-                </div>
+                
                 <div className="left-nav-links">
                 <ul className="left">
                   <li>
