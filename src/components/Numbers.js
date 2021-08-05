@@ -187,7 +187,8 @@ export default function Numbers({ onClick }) {
                                             <p class="center block">GeneShining indicates whether the organism develops a desease.</p>
                                         </div>
                                         <div class="card-action">
-                                            <p >{analysisData.mainNumber > 0 ? <p>Your organism develops potassium deficiency.</p> : <p>GeneShining indicates whether the organism develops a desease.</p>}</p>
+                                            <p >{analysisData.mainNumber > 0 ? <p>Your organism develops potassium deficiency.</p> : <p>GeneShining indicates whether the organism develops a desease.<br></br>
+                                {analysisData.mainNumber}</p>}</p>
                                         </div>
                                     </div>
                                 </div>
