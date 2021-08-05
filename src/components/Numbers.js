@@ -141,7 +141,7 @@ export default function Numbers({ onClick }) {
                                             <p>GeneShining is calculating how many genes are active (total and % of all known).</p>
                                         </div>
                                         <div class="card-action">
-                                            <p>{analysisData.timeCounter} <br></br> Thats in the range of a normal percentage!</p>
+                                            <p>{analysisData.timeCounter}  {`(${analysisData.timeCounterPC}%)`}<br></br>{analysisData.number1}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -152,7 +152,7 @@ export default function Numbers({ onClick }) {
                                             <p>It is analysed how many genes are changed in activity and whether those changes are typical for a disease.</p>
                                         </div>
                                         <div class="card-action">
-                                            <p>{analysisData.candNumTC}</p>
+                                            <p>{analysisData.number2}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -163,7 +163,7 @@ export default function Numbers({ onClick }) {
                                             <p>GeneShining is calculating whether gene activity is normal or resembles more the actvity of an organism with a desease.</p>
                                         </div>
                                         <div class="card-action">
-                                            <p>{analysisData.diffToDisease}</p>
+                                            <p>{analysisData.number3}</p>
                                         </div>
                                     </div>
                                 </div>
@@ -174,7 +174,7 @@ export default function Numbers({ onClick }) {
                                             <p>GeneShining is checking the description of the differently active genes for the name of the desease.</p>
                                         </div>
                                         <div class="card-action">
-                                            <p>{analysisData.candNumTC} </p>
+                                            <p>{analysisData.number4} </p>
                                         </div>
                                     </div>
                                 </div>
@@ -187,7 +187,7 @@ export default function Numbers({ onClick }) {
                                             <p class="center block">GeneShining indicates whether the organism develops a desease.</p>
                                         </div>
                                         <div class="card-action">
-                                            <p >A number will appear here once the analysis is done!</p>
+                                            <p >{analysisData.mainNumber > 0 ? <p>Your organism develops potassium deficiency.</p> : <p>GeneShining indicates whether the organism develops a desease.</p>}</p>
                                         </div>
                                     </div>
                                 </div>
