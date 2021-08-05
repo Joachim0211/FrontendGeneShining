@@ -8,10 +8,11 @@
 font-family: 'Roboto', sans-serif;
 }
 .fullScreen {
- height: 100vh;
  width: 100vw;
 }
-
+.root-wrapper{
+padding: 0
+}
 .logo{
   width: 240px;
   mix-blend-mode: color-burn;
@@ -80,7 +81,7 @@ font-family: 'Roboto', sans-serif;
 .title{
   font-size: 60px;
   font-weight: bold;
-  color: rgb(99, 2, 2);
+  color: #B32C50;
   width: 800px;
   margin-top: 40px;
 }
@@ -116,12 +117,12 @@ font-family: 'Roboto', sans-serif;
 
 /* New Style */
 .nav-extended{
-  background-color:#22559C;
+  background-color:#0277bd;
   color: #fff;
   font-weight: 500;
 }
 .page-footer{
-  background-color: #22559C;
+  background-color: #0277bd;
 }
 .footer-links-custom{
   font-size: 18px;
@@ -134,7 +135,6 @@ font-family: 'Roboto', sans-serif;
 .main-page-content{
   height: fit-content;
   width: 100%;
-  background-color: #F4F4F2
 }
 .main-content {
  width: 100vw;
@@ -163,7 +163,7 @@ font-family: 'Roboto', sans-serif;
   align-items: center;
   justify-content:flex-start;
   flex-wrap: wrap;
-  padding-left: 10px;
+  padding-left: 30px;
 }
 .explanationPanel{
   align-items: flex-start;
@@ -172,6 +172,8 @@ font-family: 'Roboto', sans-serif;
 }
 .main-card-title{
   width: 50%;
+  padding-right: 20px;
+  margin-right: 20px;
 }
 .main-git-title{
   font-size: 54px;
@@ -183,6 +185,7 @@ font-family: 'Roboto', sans-serif;
 .modal-content{
   color: #222;
   text-align:left;
+  border-radius: 20px;
 }
 .floating-red-btn{
   margin-left: 40px;
