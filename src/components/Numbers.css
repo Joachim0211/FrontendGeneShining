@@ -89,6 +89,11 @@
   background-color: #222;
   color: #fff
 }
+.card-action p{
+  font-size: 18px;
+  text-align: center;
+  font-weight: bold;
+}
 
 @media (min-width: 768px) {
   .root-wrapper{
