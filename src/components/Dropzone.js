@@ -6,7 +6,7 @@ import './Dropzone.css';
 
 const axios = require('axios');
 
-const submitURL = "https://geneshining.herokuapp.com/";
+const submitURL = "https://geneshining.herokuapp.com/submit-gene-data";
 
 const baseStyle = {
     display: 'flex',
