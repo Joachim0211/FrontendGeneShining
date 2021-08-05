@@ -1,17 +1,58 @@
-.card-image{
-    height: 100%;
-    min-width: 100%;
+.root-dropzone{
+    height:100%;
+    width:100%;
+    padding: 20px 0 20px 30px ;
 }
 
 .uploadButton{
-   width: 300px;
-   height: 80px; 
-   background-color: #64b5f6;
-   padding: 10px;
+   background-color: #D32F2F;
+   cursor: pointer;
+   padding: 20px;
+   border: none;
+   color: #fff;
    font-size: x-large;
    border-radius: 10px;
+   margin-bottom: 60px;
+   margin-top: 20px;
+}
+.dropzone-title{
+    text-align: left;
+    font-size: 46px;
+    padding-bottom:20px;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+.howto-para{
+    width: 50vw;
+    text-align:left;
+}
+.col-wrapper{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.container{
+    width: 100%;
+}
+.card-action-links{
+    font-size:18px;
+    padding-top:10px;
+    margin-bottom: 60px;
+}
+.dropzone-flex{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.icon{
-    margin-right: 20px;
+@media screen and (max-width: 600px){ 
+    .howto-card-content p{
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .root-dropzone{
+    padding: 10px 20px;
+    }
 }

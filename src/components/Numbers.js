@@ -8,7 +8,7 @@ import Dropzone from "./Dropzone";
 import DNALoader from "./DNALoader"
 
 
-export default function Numbers() {
+export default function Numbers({ onClick }) {
 
 
     const sidenavRef = useRef();
@@ -25,30 +25,31 @@ export default function Numbers() {
 
                 {/* here starts */}
 
-                <div className="row">
-                    <div className="col s2 light-blue lighten-2 fullScreen">
+                <div className=" root-row">
+                    {/* <div className="col s2 light-blue lighten-2 fullScreen">
                         <img src={logo} alt="Gene Shining Logo" className="logo" />
                         <div className="left-nav-links">
                             <ul className="left">
                                 <li>
-                                    <a href="#">> RNAseq</a>
+                                    <a href="#"> RNAseq</a>
                                 </li>
                                 <li>
-                                    <a href="#">> Tomato Seq</a>
+                                    <a href="#"> Tomato Seq</a>
                                 </li>
                                 <li>
-                                    <a href="#">> Genomes</a>
+                                    <a href="#"> Genomes</a>
                                 </li>
                                 <li>
-                                    <a href="#">> Bioinfo</a>
+                                    <a href="#"> Bioinfo</a>
                                 </li>
                             </ul>
                         </div>
                         <button className="button" onClick={loading ? "" : () => history.push("/")}>Back to main page</button>
-                    </div>
-                    <div className="col s10 cyan accent-1 fullScreen">
+                    </div> */}
+                    <button className="homeButton" onClick={loading ? "" : () => history.push("/")}>&#8592; &nbsp; Home</button>
+                    <div className="col s12 fullScreen">
 
-                        {!analysisData && !loading && <div className="drop-zone-container"><Dropzone setAnalysisData={setAnalysisData} setLoading={setLoading} /></div>}
+                        {!analysisData && !loading && <div className="drozone-container"><Dropzone setAnalysisData={setAnalysisData} setLoading={setLoading} /></div>}
 
                         {/* first step */}
                         
@@ -56,8 +57,8 @@ export default function Numbers() {
                             <div><h1 className="headline">What happens in the background?</h1></div>
 
                             <div class="row">
-                                <div class="col s3">
-                                    <div class="card blue-grey darken-1">
+                                <div class="col s12 m4 l3">
+                                    <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
                                             <span class="card-title center block">1. Active Genes </span>
                                             <p>GeneShining determines how many genes are active.<br></br></p>
@@ -69,8 +70,8 @@ export default function Numbers() {
                                     
                                 </div>
 
-                                <div class="col s3">
-                                    <div class="card blue-grey darken-1">
+                                <div class="col s12 m4 l3">
+                                    <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
                                             <span class="card-title center block">2. Gene Activity Changes</span>
                                             <p>It is analysed how many genes are changed in activity and whether those changes are typical for a disease.</p>
@@ -82,8 +83,8 @@ export default function Numbers() {
                                     
                                 </div>
 
-                                <div class="col s3">
-                                    <div class="card blue-grey darken-1">
+                                <div class="col s12 m4 l3">
+                                    <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
                                             <span class="card-title center block">3. Differences to Normal</span>
                                             <p>GeneShining is calculating whether gene activity is normal or resembles more the actvity of a organism with a desease.</p>
@@ -94,8 +95,8 @@ export default function Numbers() {
                                     </div>
                                     
                                 </div>
-                                <div class="col s3">
-                                    <div class="card blue-grey darken-1">
+                                <div class="col s12 m4 l3">
+                                    <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
                                             <span class="card-title center block">4. Gene Name</span>
                                             <p>GeneShining is checking the description of the differently active genes for the name of the desease.</p>
@@ -111,11 +112,11 @@ export default function Numbers() {
                             </div>
                             {loading && (<div>
                                 <div class="row" >
-                                    <div class="col s6 offset-s3">
-                                        <div class="card light-blue lighten-2 main-card">
+                                    <div class="col s12 m4 l6 offset-l3">
+                                        <div class="card green lighten-1 main-card">
                                             <div class="card-content white-text">
-                                                <span class="card-title card-title-main-one center block">Overall result</span>
-                                                <p className="card-title-main">GeneShining is calculating whether the organism develops a disease.</p>
+                                                <span class="card-title card-title-main-one center block ">Overall result</span>
+                                                <p className="card-title-main ">GeneShining is calculating whether the organism develops a disease.</p>
                                             </div>
                                             <div class="card-action ">
                                             </div>
@@ -128,12 +129,13 @@ export default function Numbers() {
                                      
                             </div>)}
                             
+                            
                             {/* This is shown when the data are analysed */}
                         </div>)}
                         {analysisData && (<div>
                             <div class="row first-row">
-                                <div class="col s12 m3">
-                                    <div class="card blue-grey darken-1">
+                                <div class="col s12 m4 l3">
+                                    <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
                                             <span class="card-title center block">1. Active Genes </span>
                                             <p>GeneShining is calculating how many genes are active (total and % of all known).</p>
@@ -143,8 +145,8 @@ export default function Numbers() {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col s12 m3">
-                                    <div class="card blue-grey darken-1">
+                                <div class="col s12 m4 l3">
+                                    <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
                                             <span class="card-title center block">2. Gene Activity Changes</span>
                                             <p>It is analysed how many genes are changed in activity and whether those changes are typical for a disease.</p>
@@ -154,8 +156,8 @@ export default function Numbers() {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col s12 m3">
-                                    <div class="card blue-grey darken-1">
+                                <div class="col s12 m4 l3">
+                                    <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
                                             <span class="card-title center block">3. Differences to Normal</span>
                                             <p>GeneShining is calculating whether gene activity is normal or resembles more the actvity of an organism with a desease.</p>
@@ -165,8 +167,8 @@ export default function Numbers() {
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col s12 m3">
-                                    <div class="card blue-grey darken-1">
+                                <div class="col s12 m4 l3">
+                                    <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
                                             <span class="card-title center block">4. Gene Name</span>
                                             <p>GeneShining is checking the description of the differently active genes for the name of the desease.</p>
@@ -178,8 +180,8 @@ export default function Numbers() {
                                 </div>
                             </div>
                             <div class="row second-row">
-                                <div class="col s6 offset-s3">
-                                    <div class="card #e57373 light-blue lighten-2 main-card">
+                                <div class="col s12 m4 l6 offset-l3">
+                                    <div class="card green main-card">
                                         <div class="card-content white-text">
                                             <span class="card-title center block">Overall result</span>
                                             <p class="center block">GeneShining indicates whether the organism develops a desease.</p>
@@ -191,13 +193,14 @@ export default function Numbers() {
                                 </div>
 
                             </div>
+                            
                         </div>)}
 
 
                     </div>
 
                 </div>
-
+                
             </div>
         </>
     );

@@ -45,7 +45,7 @@ function App() {
     <>
       <ul className="sidenav" id="mobile-demo" ref={sidenavRef}>
         <li>
-          <a href="#">Home</a>
+          <a href="#/">Home</a>
         </li>
         <li>
           <a href="#">Tomato Seq</a>
@@ -59,35 +59,16 @@ function App() {
       </ul>
       <nav class="nav-extended">
         <div class="nav-wrapper">
-          <a href="#" class="brand-logo"><img src={logo} width="140" height="60" alt="Logo" /></a>
+          <a href="/" class="brand-logo"><img src={logo} width="140" height="60" alt="Logo" /></a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">Home</a></li>
-            <li><a href="badges.html">Tomato Seq</a></li>
-            <li><a href="collapsible.html">Genomes</a></li>
-            <li><a href="collapsible.html">BioInfo</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Tomato Seq</a></li>
+            <li><a href="#">Genomes</a></li>
+            <li><a href="#">BioInfo</a></li>
           </ul>
         </div>
-        {/* <div class="nav-content">
-                <ul class="tabs tabs-transparent">
-                  <li class="tab"><a href="#test1">Test 1</a></li>
-                  <li class="tab"><a class="active" href="#test2">Test 2</a></li>
-                  <li class="tab"><a href="#test3">Disabled Tab</a></li>
-                  <li class="tab"><a href="#test4">Test 4</a></li>
-                </ul>
-              </div> */}
       </nav>
-
-      <ul class="sidenav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-      </ul>
-
-      {/* <div id="test1" class="col s12">Test 1</div>
-        <div id="test2" class="col s12">Test 2</div>
-        <div id="test3" class="col s12">Test 3</div>
-        <div id="test4" class="col s12">Test 4</div> */}
 
       <Switch>
         <Route exact path="/">
@@ -152,7 +133,7 @@ function App() {
                 <div className="row explanationPanel">
                   <div>
                     <div className="main-title-content">
-                      <span className="darkRed card-title main-card-title"> <span className="main-git-title">GeneShining</span>
+                      <span className="darkRed card-title main-card-title"> <span className="main-git-title">Gene Shining</span>
                         <br />
                         <br />
                         The earliest possible diagnosis of latent diseases based on gene activity (RNAseq).
@@ -231,24 +212,31 @@ function App() {
         </Route>
       </Switch>
       <footer class="page-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col l8 offset-l2 s12">
-              <ul className="footer-links-custom">
-                <li><a class="grey-text text-lighten-3" href="#!">What is RNAseq and why it is ideal as a diagnostic tool?</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">What can you achieve with this website?</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">What do you need for running an analyses?</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">How to start?</a></li>
-              </ul>
+          <div class="container">
+            <div class="row">
+              <div class="col l5 s11">
+                <h5 class="white-text">Gene Shining</h5>
+                <img src={logo} width="300" height="160" alt="Logo" class="grey-text text-lighten-4" />
+                
+              </div>
+              <div class="col l5 offset-l2 s11">
+                <h5 class="white-text">FAQ</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">What is RNAseq and why it is ideal as a diagnostic tool?</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">What can you achieve with this website?</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">What do you need for running an analyses?</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">How to start?</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="container">
+          <div class="footer-copyright">
+            <div class="container">
             © 2021 Gene Shining
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      
     </>
   )
 }
