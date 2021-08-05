@@ -56,11 +56,11 @@ export default function Numbers({ onClick }) {
                         {loading && (<div>
                             <div><h1 className="headline">What happens in the background?</h1></div>
 
-                            <div class="row">
+                            <div class="row" style={{margin: '0px 10px'}}>
                                 <div class="col s12 m4 l3">
                                     <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
-                                            <span class="card-title center block">1. Active Genes </span>
+                                            <span class="card-title center block " style={{fontWeight: 500}}>1. Active Genes </span>
                                             <p>GeneShining determines how many genes are active.<br></br></p>
                                         </div>
                                         <div class="card-action">
@@ -73,7 +73,7 @@ export default function Numbers({ onClick }) {
                                 <div class="col s12 m4 l3">
                                     <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
-                                            <span class="card-title center block">2. Gene Activity Changes</span>
+                                            <span class="card-title center block" style={{fontWeight: 500}}>2. Gene Activity Changes</span>
                                             <p>It is analysed how many genes are changed in activity and whether those changes are typical for a disease.</p>
                                         </div>
                                         <div class="card-action">
@@ -86,7 +86,7 @@ export default function Numbers({ onClick }) {
                                 <div class="col s12 m4 l3">
                                     <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
-                                            <span class="card-title center block">3. Differences to Normal</span>
+                                            <span class="card-title center block" style={{fontWeight: 500}}>3. Differences to Normal</span>
                                             <p>GeneShining is calculating whether gene activity is normal or resembles more the actvity of a organism with a desease.</p>
                                         </div>
                                         <div class="card-action">
@@ -98,7 +98,7 @@ export default function Numbers({ onClick }) {
                                 <div class="col s12 m4 l3">
                                     <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
-                                            <span class="card-title center block">4. Gene Name</span>
+                                            <span class="card-title center block" style={{fontWeight: 500}}>4. Gene Name</span>
                                             <p>GeneShining is checking the description of the differently active genes for the name of the desease.</p>
                                         </div>
                                         <div class="card-action">
@@ -111,11 +111,11 @@ export default function Numbers({ onClick }) {
 
                             </div>
                             {loading && (<div>
-                                <div class="row" >
+                                <div class="row" style={{margin: '0px 10px'}}>
                                     <div class="col s12 m4 l6 offset-l3">
                                         <div class="card green lighten-1 main-card">
                                             <div class="card-content white-text">
-                                                <span class="card-title card-title-main-one center block ">Overall result</span>
+                                                <span class="card-title card-title-main-one center block " style={{fontWeight: 500}}>Overall result</span>
                                                 <p className="card-title-main ">GeneShining is calculating whether the organism develops a disease.</p>
                                             </div>
                                             <div class="card-action ">
@@ -133,11 +133,11 @@ export default function Numbers({ onClick }) {
                             {/* This is shown when the data are analysed */}
                         </div>)}
                         {analysisData && (<div>
-                            <div class="row first-row">
+                            <div class="row first-row" style={{margin: '0px 10px'}}>
                                 <div class="col s12 m4 l3">
                                     <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
-                                            <span class="card-title center block">1. Active Genes </span>
+                                            <span class="card-title center block" style={{fontWeight: 500}}>1. Active Genes </span>
                                             <p>GeneShining is calculating how many genes are active (total and % of all known).</p>
                                         </div>
                                         <div class="card-action">
@@ -148,7 +148,7 @@ export default function Numbers({ onClick }) {
                                 <div class="col s12 m4 l3">
                                     <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
-                                            <span class="card-title center block">2. Gene Activity Changes</span>
+                                            <span class="card-title center block bold " style={{fontWeight: 500}}>2. Gene Activity Changes</span>
                                             <p>It is analysed how many genes are changed in activity and whether those changes are typical for a disease.</p>
                                         </div>
                                         <div class="card-action">
@@ -159,7 +159,7 @@ export default function Numbers({ onClick }) {
                                 <div class="col s12 m4 l3">
                                     <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
-                                            <span class="card-title center block">3. Differences to Normal</span>
+                                            <span class="card-title center block" style={{fontWeight: 500}}>3. Differences to Normal</span>
                                             <p>GeneShining is calculating whether gene activity is normal or resembles more the actvity of an organism with a desease.</p>
                                         </div>
                                         <div class="card-action">
@@ -170,7 +170,7 @@ export default function Numbers({ onClick }) {
                                 <div class="col s12 m4 l3">
                                     <div class="card blue-grey lighten-1">
                                         <div class="card-content white-text">
-                                            <span class="card-title center block">4. Gene Name</span>
+                                            <span class="card-title center block" style={{fontWeight: 500}}>4. Gene Name</span>
                                             <p>GeneShining is checking the description of the differently active genes for the name of the desease.</p>
                                         </div>
                                         <div class="card-action">
@@ -183,7 +183,7 @@ export default function Numbers({ onClick }) {
                                 <div class="col s12 m4 l6 offset-l3">
                                     <div class="card green main-card">
                                         <div class="card-content white-text">
-                                            <span class="card-title center block">Overall result</span>
+                                            <span class="card-title center block" style={{fontWeight: 500}}>Overall result</span>
                                             <p class="center block">GeneShining indicates whether the organism develops a desease.</p>
                                         </div>
                                         <div class="card-action">

@@ -45,16 +45,16 @@ function App() {
     <>
       <ul className="sidenav" id="mobile-demo" ref={sidenavRef}>
         <li>
-          <a href="#/">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="#">Tomato Seq</a>
+          <a href="https://solgenomics.net/organism/Solanum_lycopersicum/genome" target='_blank'>Tomato Seq</a>
         </li>
         <li>
-          <a href="#">Genomes</a>
+          <a href="https://www.genome.gov/human-genome-project/What" target='_blank'>Genomes</a>
         </li>
         <li>
-          <a href="#">BioInfo</a>
+          <a href="https://en.wikipedia.org/wiki/Bioinformatics" target='_blank'>BioInfo</a>
         </li>
       </ul>
       <nav class="nav-extended">
@@ -63,9 +63,9 @@ function App() {
           <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Tomato Seq</a></li>
-            <li><a href="#">Genomes</a></li>
-            <li><a href="#">BioInfo</a></li>
+            <li><a href="https://solgenomics.net/organism/Solanum_lycopersicum/genome" target='_blank'>Tomato Seq</a></li>
+            <li><a href="https://www.genome.gov/human-genome-project/What" target='_blank'>Genomes</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Bioinformatics" target='_blank'>BioInfo</a></li>
           </ul>
         </div>
       </nav>
@@ -221,11 +221,11 @@ function App() {
               </div>
               <div class="col l5 offset-l2 s11">
                 <h5 class="white-text">FAQ</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">What is RNAseq and why it is ideal as a diagnostic tool?</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">What can you achieve with this website?</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">What do you need for running an analyses?</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">How to start?</a></li>
+                <ul >
+                  <li><a class="grey-text text-lighten-3" href="https://www.nature.com/articles/nrg.2016.10" target="_blank">What is RNAseq and why it is ideal as a diagnostic tool?</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.nature.com/articles/nrg.2016.10" target='_blank'>What can you achieve with this website?</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.nature.com/articles/nrg.2016.10" target='_blank'>What do you need for running an analyses?</a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.nature.com/articles/nrg.2016.10" target='_blank'>How to start?</a></li>
                 </ul>
               </div>
             </div>
